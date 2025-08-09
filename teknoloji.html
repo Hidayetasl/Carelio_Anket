@@ -1,29 +1,91 @@
-<!DOCTYPE html><html lang="tr"><head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Teknoloji • Carelio</title><link rel="stylesheet" href="assets/css/global-v3.css"></head><body>
-<header class="site-header">
-  <div class="container nav">
-    <div class="brand">
-      <img class="logo" src="images/logo.png" alt="Carelio"><span class="name">Carelio</span>
-    </div>
-    <nav class="menu">
-      <a  href="index.html">Ana Sayfa</a>
-      <a  href="hizmetler.html">Hizmetler</a>
-      <a  href="paketler.html">Paketler</a>
-      <a class="active" href="teknoloji.html">Teknoloji</a>
-      <a href="hakkimizda.html">Hakkımızda</a>
-      <a href="haberler.html">Haberler</a>
-      <a href="iletisim.html">İletişim</a>
-      <a href="anket.html">Anket</a>
-      <a class="btn-login" href="uye-girisi.html">Üye Girişi</a>
-    </nav>
-  </div>
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Carelio Robot Teknolojileri – Bir Dost Kadar Yakın</title>
+<style>
+* {margin:0; padding:0; box-sizing:border-box;}
+body {font-family:'Segoe UI',sans-serif; background:#f9f9f9; color:#333;}
+
+/* Header */
+header {background:#3d84a8; color:#fff; display:flex; justify-content:space-between; align-items:center; padding:15px 25px; position:fixed; top:0; width:100%; z-index:100;}
+header .logo img {height:60px;}
+nav ul {display:flex; list-style:none; gap:20px;}
+nav ul li a {color:white; text-decoration:none; font-weight:600;}
+.hamburger {display:none; font-size:28px; background:none; color:white; border:none;}
+@media(max-width:768px){
+  nav ul {display:none; flex-direction:column; background:#3d84a8; position:absolute; right:0; top:70px; padding:10px;}
+  nav ul.show {display:flex;}
+  .hamburger {display:block;}
+}
+
+/* Page content */
+.container {max-width:1300px; margin:120px auto 40px; padding:20px;}
+h2 {color:#3d84a8; text-align:center; margin-bottom:30px;}
+.grid {display:grid; grid-template-columns:repeat(4, 1fr); gap:20px;}
+.card {background:white; border-radius:10px; box-shadow:0 5px 15px rgba(0,0,0,0.1); overflow:hidden; display:flex; flex-direction:column; text-align:center;}
+.card img {width:100%; height:200px; object-fit:contain; background:#f3f3f3;}
+.card h3 {color:#3d84a8; padding:15px; margin:0;}
+.card p {padding:0 15px 15px; font-size:14px;}
+
+/* Responsive */
+@media(max-width:1024px){.grid{grid-template-columns:repeat(2,1fr);}}
+@media(max-width:600px){.grid{grid-template-columns:1fr;}}
+
+/* Footer */
+footer {text-align:center; padding:15px; background:#3d84a8; color:white; margin-top:40px;}
+</style>
+</head>
+<body>
+<header>
+  <div class="logo"><img src="images/logo.png" alt="Carelio Logo"></div>
+  <button class="hamburger">☰</button>
+  <nav>
+    <ul>
+      <li><a href="index.html">Ana Sayfa</a></li>
+      <li><a href="index.html#services">Hizmetler</a></li>
+      <li><a href="teknoloji.html">Teknoloji</a></li>
+      <li><a href="https://forms.gle/LYEtVoVyPdqzUWFq9" target="_blank">Anket</a></li>
+    </ul>
+  </nav>
 </header>
-<section class="hero"><div class="container"><h1>Teknolojimiz</h1><p>Ev asistanları ve sensörlerle desteklenen güvenli yaşam.</p></div></section>
-<section class="section"><div class="container"><h2>Robot Teknolojileri</h2>
-<div class="tech-grid">
-  <article class="tech-card"><img src="images/ebo-x.jpg" alt="EBO X"><div class="body"><h3>EBO X Aile Arkadaşı Robotu</h3><p>Düşme algılama, yüz tanıma, ilaç hatırlatma ve uzaktan bağlantı.</p></div></article>
-  <article class="tech-card"><img src="images/loona.png" alt="Loona"><div class="body"><h3>Loona Petbot</h3><p>Yalnızlık hissini azaltan, etkileşimli ve eğlenceli ev arkadaşı.</p></div></article>
-  <article class="tech-card"><img class="img-contain" src="images/temi.jpg" alt="Temi"><div class="body"><h3>Temi Servis Robotu</h3><p>Görüntülü görüşme, yönlendirme ve yaşlı/sağlık bakımında yardımcı.</p></div></article>
-</div></div></section>
-<footer class="site-footer"><div class="container"><p>© 2025 Carelio • Tüm Hakları Saklıdır.</p></div></footer><script src="assets/js/main-v3.js"></script></body></html>
+
+<div class="container">
+<h2>Carelio Robot Teknolojileri – Bir Dost Kadar Yakın</h2>
+<div class="grid">
+<div class="card">
+<img src="images/image_5375e7.jpg" alt="EBO X Robot">
+<h3>EBO X Aile Arkadaşı Robotu</h3>
+<p>Düşme algılama, yüz tanıma, ilaç hatırlatmaları ve uzaktan bağlantı özellikleriyle güvenlik sağlar.</p>
+</div>
+<div class="card">
+<img src="images/loona.png" alt="Loona Petbot">
+<h3>Loona Petbot</h3>
+<p>Evcil hayvan benzeri davranışlarıyla yalnızlık hissini azaltan etkileşimli bir robot dost.</p>
+</div>
+<div class="card">
+<img src="images/mistiy_robot.webp" alt="Misty Robot">
+<h3>Misty Asistan Robot</h3>
+<p>Gelişmiş sensörler ve yapay zeka desteğiyle kişisel asistan işlevi görür.</p>
+</div>
+<div class="card">
+<img src="images/temi.jpg" alt="Temi Robot">
+<h3>Temi Servis Robotu</h3>
+<p>Günlük yaşam aktivitelerine destek sağlar ve sağlık hizmetleri için rehberlik eder.</p>
+</div>
+</div>
+</div>
+
+<footer>
+© 2025 Carelio - Sağlık ve Konfor
+</footer>
+
+<script>
+document.querySelector('.hamburger').addEventListener('click', () => {
+  document.querySelector('nav ul').classList.toggle('show');
+});
+</script>
+</body>
+</html>
