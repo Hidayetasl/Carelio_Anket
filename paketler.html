@@ -1,117 +1,40 @@
-<!DOCTYPE html>
-<html lang="tr">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Carelio Paketler</title>
-<style>
-* {margin:0; padding:0; box-sizing:border-box;}
-body {font-family:'Segoe UI',sans-serif; background:#f9f9f9; color:#333;}
-
-/* Header */
-header {background:#3d84a8; color:#fff; display:flex; justify-content:space-between; align-items:center; padding:15px 25px; position:fixed; top:0; width:100%; z-index:100; transition:all .3s;}
-header .logo img {height:60px;}
-nav ul {display:flex; list-style:none; gap:20px;}
-nav ul li a {color:white; text-decoration:none; font-weight:600;}
-.hamburger {display:none; font-size:28px; background:none; color:white; border:none;}
-@media(max-width:768px){
-  nav ul {display:none; flex-direction:column; background:#3d84a8; position:absolute; right:0; top:70px; padding:10px;}
-  nav ul.show {display:flex;}
-  .hamburger {display:block;}
-}
-
-/* Hero Title */
-.hero-title {margin-top:80px; text-align:center; padding:50px 20px; background:#3d84a8; color:white;}
-.hero-title h1 {font-size:36px; margin-bottom:15px;}
-.hero-title p {font-size:18px;}
-
-/* Services Section */
-.services {padding:40px 20px; text-align:center; max-width:1300px; margin:auto;}
-.services h2 {font-size:32px; color:#3d84a8; margin-bottom:30px;}
-.service-grid {
-  display:grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap:15px;
-}
-.card {
-  background:white; padding:15px; border-radius:10px;
-  box-shadow:0 4px 10px rgba(0,0,0,0.08); text-align:center;
-  transition:transform .3s, box-shadow .3s;
-}
-.card:hover {transform:scale(1.05); box-shadow:0 8px 18px rgba(0,0,0,0.15);}
-.card img {width:100%; max-width:100px; margin-bottom:10px; border-radius:8px;}
-.card h3 {color:#3d84a8; font-size:16px; margin-bottom:8px;}
-.card p {font-size:12px; margin-bottom:10px;}
-.open-popup {
-  background:#3d84a8; color:white; border:none; padding:8px 15px; border-radius:20px; cursor:pointer; font-size:14px;
-}
-.open-popup:hover {background:#2c6a86;}
-
-/* Popups */
-.popup {display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.6); justify-content:center; align-items:center; z-index:1000; animation:fadeIn .3s;}
-@keyframes fadeIn {from{opacity:0;} to{opacity:1;}}
-.popup-content {background:white; padding:15px; border-radius:10px; max-width:420px; width:90%; text-align:center; position:relative; animation:scaleUp .3s;}
-@keyframes scaleUp {from{transform:scale(.8);} to{transform:scale(1);}}
-.popup-content img {width:100%; border-radius:10px; margin-bottom:10px;}
-.popup-content h2 {color:#3d84a8; margin-bottom:10px; font-size:20px;}
-.popup-content p {font-size:14px; line-height:1.5; text-align:left;}
-.popup-close {position:absolute; top:8px; right:8px; background:#3d84a8; color:white; border:none; padding:6px 10px; border-radius:4px; cursor:pointer;}
-
-footer {background:#3d84a8; color:white; text-align:center; padding:20px; margin-top:50px;}
-</style>
-</head>
-<body>
-<header>
-  <div class="logo"><img src="images/logo.png" alt="Carelio Logo"></div>
-  <button class="hamburger">☰</button>
-  <nav>
-    <ul>
-      <li><a href="index.html">Ana Sayfa</a></li>
-      <li><a href="index.html#services">Hizmetler</a></li>
-      <li><a href="paketler.html">Paketler</a></li>
-      <li><a href="teknoloji.html">Teknoloji</a></li>
-      <li><a href="https://forms.gle/LYEtVoVyPdqzUWFq9" target="_blank">Anket</a></li>
-    </ul>
-  </nav>
-</header>
-
-<section class="hero-title">
-  <h1>Carelio Paketleri</h1>
-  <p>Sevdikleriniz için güvenli, konforlu ve sağlıklı yaşam çözümleri.</p>
-</section>
-
-<section class="services">
-  <h2>Paketlerimiz</h2>
-  <div class="service-grid">
-    <div class="card"><img src="images/cinar.png" alt="Çınar Paketi"><h3>🌳 Çınar Paketi</h3><p>Evde yalnız kalan yaşlılar için temel güvenlik ve sağlık desteği.</p><button class="open-popup" data-target="popup-cinar">Detay</button></div>
-    <div class="card"><img src="images/papatya.png" alt="Papatya Paketi"><h3>🌼 Papatya Paketi</h3><p>Nazik ve etkili sağlık takibi, düzenli kontroller.</p><button class="open-popup" data-target="popup-papatya">Detay</button></div>
-    <div class="card"><img src="images/menekse.png" alt="Menekşe Paketi"><h3>🌸 Menekşe Paketi</h3><p>AI destekli bakım ve gelişmiş konfor.</p><button class="open-popup" data-target="popup-menekse">Detay</button></div>
-    <div class="card"><img src="images/sevgi.png" alt="Sevgi Paketi"><h3>❤️ Sevgi Paketi</h3><p>Tam kapsamlı bakım, sevgi dolu bir çözüm.</p><button class="open-popup" data-target="popup-sevgi">Detay</button></div>
-    <div class="card"><img src="images/mutluluk.png" alt="Mutluluk Paketi"><h3>😊 Mutluluk Paketi</h3><p>Hayat boyu mutluluk ve huzur için üst düzey konfor.</p><button class="open-popup" data-target="popup-mutluluk">Detay</button></div>
+<!DOCTYPE html><html lang="tr"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Paketler • Carelio</title><link rel="stylesheet" href="assets/css/global-v3.css"></head><body>
+<header class="site-header">
+  <div class="container nav">
+    <div class="brand">
+      <img class="logo" src="images/logo.png" alt="Carelio"><span class="name">Carelio</span>
+    </div>
+    <nav class="menu">
+      <a  href="index.html">Ana Sayfa</a>
+      <a  href="hizmetler.html">Hizmetler</a>
+      <a class="active" href="paketler.html">Paketler</a>
+      <a  href="teknoloji.html">Teknoloji</a>
+      <a href="hakkimizda.html">Hakkımızda</a>
+      <a href="haberler.html">Haberler</a>
+      <a href="iletisim.html">İletişim</a>
+      <a href="anket.html">Anket</a>
+      <a class="btn-login" href="uye-girisi.html">Üye Girişi</a>
+    </nav>
   </div>
-</section>
-
-<!-- Popuplar -->
-<div id="popup-cinar" class="popup"><div class="popup-content"><button class="popup-close">✖</button><img src="images/cinar.png"><h2>Çınar Paketi</h2><p><strong>Temel Donanım:</strong> Carelio Home Hub + Saat<br><strong>Sağlık Takibi:</strong> Nabız, tansiyon, ilaç hatırlatma<br><strong>Check-up:</strong> Standart, yılda 1<br><strong>Doktor Desteği:</strong> Online danışma<br><em>“Evde yalnız ama asla çaresiz değil.”</em></p></div></div>
-<div id="popup-papatya" class="popup"><div class="popup-content"><button class="popup-close">✖</button><img src="images/papatya.png"><h2>Papatya Paketi</h2><p><strong>Temel Donanım:</strong> Carelio Home Hub + Akıllı Tartı + Sensörler<br><strong>Sağlık Takibi:</strong> Gelişmiş Bluetooth verisi + aile bildirimleri<br><strong>Check-up:</strong> Gelişmiş, yılda 1<br><strong>Doktor Desteği:</strong> Ayda 1 ziyaret<br><em>“Nazikçe korur, sevdiklerinizin sağlığını düzenli takip eder.”</em></p></div></div>
-<div id="popup-menekse" class="popup"><div class="popup-content"><button class="popup-close">✖</button><img src="images/menekse.png"><h2>Menekşe Paketi</h2><p><strong>Sağlık Takibi:</strong> AI destekli haftalık analiz ve öneri<br><strong>Check-up:</strong> Gelişmiş, yılda 1<br><strong>Doktor Desteği:</strong> Ayda 1 ziyaret<br><strong>Robot Özelliği:</strong> AI destekli interaktif robot yardımcısı<br><em>“Evde bir dost, bir yardımcı, bir asistan.”</em></p></div></div>
-<div id="popup-sevgi" class="popup"><div class="popup-content"><button class="popup-close">✖</button><img src="images/sevgi.png"><h2>Sevgi Paketi</h2><p><strong>Temel Donanım:</strong> Gelişmiş robot + sensör paketi<br><strong>Sağlık Takibi:</strong> Haftalık AI analizi<br><strong>Check-up:</strong> Kapsamlı, yılda 1<br><strong>Robot Özelliği:</strong> Gelişmiş interaktif robot<br><em>“Sevgi dolu bir bakım çözümü.”</em></p></div></div>
-<div id="popup-mutluluk" class="popup"><div class="popup-content"><button class="popup-close">✖</button><img src="images/mutluluk.png"><h2>Mutluluk Paketi</h2><p><strong>Temel Donanım:</strong> Temi Robot + tam otomasyon sensör paketi<br><strong>Sağlık Takibi:</strong> Haftalık AI analiz ve tam izleme<br><strong>Check-up:</strong> Kapsamlı, yılda 2<br><strong>Robot Özelliği:</strong> Temi sınıfı tam özellikli robot asistan<br><em>“Hayat boyu güven ve mutluluk.”</em></p></div></div>
-
-<footer><p>© 2025 Carelio - Sağlık ve Konfor</p></footer>
-
-<script>
-document.querySelector('.hamburger').addEventListener('click', () => {
-  document.querySelector('nav ul').classList.toggle('show');
-});
-document.addEventListener('DOMContentLoaded', function () {
-  const popups = document.querySelectorAll('.popup');
-  const openButtons = document.querySelectorAll('.open-popup');
-  const closeButtons = document.querySelectorAll('.popup-close');
-  openButtons.forEach(btn => {btn.addEventListener('click', function () {const target = document.getElementById(this.dataset.target);popups.forEach(p => p.style.display = 'none');target.style.display = 'flex';});});
-  closeButtons.forEach(btn => {btn.addEventListener('click', function () {this.closest('.popup').style.display = 'none';});});
-  document.addEventListener('click', function(e) {if (e.target.classList.contains('popup')) {e.target.style.display = 'none';}});
-});
-</script>
-</body>
-</html>
+</header>
+<section class="hero"><div class="container"><h1>Paketlerimiz</h1><p>İhtiyaca göre ölçeklenen, esnek paketler.</p></div></section>
+<section class="section"><div class="container"><div class="package-row"><div class="package-card"><img src="images/cinar.png"><h3>Çınar</h3><p>Evde yalnız ama asla çaresiz değil.</p><a class="btn-scroll" href="#cinar">Detay</a></div><div class="package-card"><img src="images/papatya.png"><h3>Papatya</h3><p>Nazikçe korur, sevdiklerinizin sağlığını düzenli takip eder.</p><a class="btn-scroll" href="#papatya">Detay</a></div><div class="package-card"><img src="images/menekse.png"><h3>Menekşe</h3><p>Evde bir dost, bir yardımcı, bir asistan.</p><a class="btn-scroll" href="#menekse">Detay</a></div><div class="package-card"><img src="images/sevgi.png"><h3>Sevgi</h3><p>Tam kapsamlı bakım, sevgi dolu bir çözüm.</p><a class="btn-scroll" href="#sevgi">Detay</a></div><div class="package-card"><img src="images/mutluluk.png"><h3>Mutluluk</h3><p>Hayat boyu güven ve mutluluk.</p><a class="btn-scroll" href="#mutluluk">Detay</a></div></div></div></section>
+<section class="section" id="cinar"><div class="container">
+      <div class="package-detail" id="cinar"><div class="media"><img src="images/cinar.png"></div><div class="content">
+      <h2>Çınar Paketi</h2><p><strong>Evde yalnız ama asla çaresiz değil.</strong></p><ul><li>Temel Donanım: Carelio Home Hub + Saat</li><li>Sağlık Takibi: Nabız, tansiyon, ilaç hatırlatma</li><li>Check-up: Standart, yılda 1</li><li>Doktor Desteği: Online danışma</li><li>Psikolog / Diyetisyen: AI destekli rapor</li><li>Çağrı Merkezi: 7/24 çağrı ve ambulans entegrasyonu</li><li>Ev Sensörleri: Temel sensör paketi (kapı, ışık)</li><li>Akıllı Ev Kontrolü: Temel kontrol özellikleri</li><li>AI Destekli Analiz: Basit hatırlatma analizi</li><li>Hedef Kitle: Evde yalnız kalan yaşlı yakınlar</li></ul><div class="scenario">“Çınar Paketi ile sevdikleriniz güvende; her gün düzenli kontrol ve acil durumda tek tuşla yardım.”</div>
+      </div></div></div></section><section class="section" id="papatya"><div class="container">
+      <div class="package-detail" id="papatya"><div class="media"><img src="images/papatya.png"></div><div class="content">
+      <h2>Papatya Paketi</h2><p><strong>Nazikçe korur, sevdiklerinizin sağlığını düzenli takip eder.</strong></p><ul><li>Temel Donanım: Carelio Home Hub + Akıllı Tartı + Sensörler</li><li>Sağlık Takibi: Gelişmiş Bluetooth verisi + aile bildirimleri</li><li>Check-up: Gelişmiş, yılda 1</li><li>Doktor Desteği: Ayda 1 ziyaret</li><li>Hemşire Desteği: Ayda 2 ziyaret</li><li>Psikolog / Diyetisyen: Ayda 1 online görüşme</li><li>Çağrı Merkezi: 7/24 destek hattı + Aile paneli</li><li>Ev Sensörleri: Kapı, gaz, duman sensörleri</li><li>Akıllı Ev Kontrolü: Elektrik, gaz, kapı kontrolü</li><li>AI Destekli Analiz: Düzenli takip ve öneri</li></ul><div class="scenario">“Sevdikleriniz için yumuşak bir dokunuş, düzenli sağlık kontrolü.”</div>
+      </div></div></div></section><section class="section" id="menekse"><div class="container">
+      <div class="package-detail" id="menekse"><div class="media"><img src="images/menekse.png"></div><div class="content">
+      <h2>Menekşe Paketi</h2><p><strong>Evde bir dost, bir yardımcı, bir asistan.</strong></p><ul><li>Sağlık Takibi: AI destekli haftalık analiz ve öneri</li><li>Check-up: Gelişmiş, yılda 1</li><li>Doktor Desteği: Ayda 1 ziyaret</li><li>Hemşire Desteği: Ayda 2 ziyaret</li><li>Psikolog / Diyetisyen: Ayda 1 görüşme</li><li>Çağrı Merkezi: 7/24 destek + AI senaryoları</li><li>Ev Sensörleri: Kapsamlı sensör paketi (hareket, kapı, gaz)</li><li>Akıllı Ev Kontrolü: Klima, TV, ışık; tam ev kontrolü</li><li>Robot Özelliği: AI destekli interaktif robot yardımcısı</li><li>AI Destekli Analiz: Haftalık sağlık raporu ve öneriler</li><li>Hedef Kitle: Daha fazla konfor ve etkileşim isteyen ileri yaşlılar</li></ul><div class="scenario">“Menekşe ile evde yalnızlık yerini etkileşime bırakır; AI asistan günlük yaşamı kolaylaştırır.”</div>
+      </div></div></div></section><section class="section" id="sevgi"><div class="container">
+      <div class="package-detail" id="sevgi"><div class="media"><img src="images/sevgi.png"></div><div class="content">
+      <h2>Sevgi Paketi</h2><p><strong>Tam kapsamlı bakım, sevgi dolu bir çözüm.</strong></p><ul><li>Temel Donanım: Gelişmiş robot + sensör paketi</li><li>Sağlık Takibi: Haftalık AI analiz ve sensörlü takip</li><li>Check-up: Kapsamlı, yılda 1</li><li>Doktor Desteği: Ayda 2 ziyaret</li><li>Hemşire Desteği: Ayda 2 ziyaret</li><li>Psikolog / Diyetisyen: Ayda 1 görüşme</li><li>Çağrı Merkezi: 7/24 canlı destek hattı</li><li>Ev Sensörleri: Yatak, hareket, kapı, gaz (gelişmiş paket)</li><li>Akıllı Ev Kontrolü: Klima, TV, ısıtma; tam otomasyon</li><li>Robot Özelliği: Gelişmiş interaktif robot</li><li>AI Destekli Analiz: Haftalık kapsamlı sağlık analizi</li><li>Hedef Kitle: Tam kapsamlı ve canlı destek isteyen aileler</li></ul><div class="scenario">“Sevgi Paketi ile tıbbi ve duygusal destek aynı çatı altında, aileler için iç rahatlığı.”</div>
+      </div></div></div></section><section class="section" id="mutluluk"><div class="container">
+      <div class="package-detail" id="mutluluk"><div class="media"><img src="images/mutluluk.png"></div><div class="content">
+      <h2>Mutluluk Paketi</h2><p><strong>Hayat boyu güven ve mutluluk.</strong></p><ul><li>Temel Donanım: Temi Robot + tam otomasyon sensör paketi</li><li>Sağlık Takibi: Haftalık AI analiz ve tam izleme</li><li>Check-up: Kapsamlı, yılda 2</li><li>Doktor Desteği: Ayda 2 ziyaret</li><li>Hemşire Desteği: Ayda 2 ziyaret</li><li>Psikolog / Diyetisyen: Ayda 1 görüşme</li><li>Çağrı Merkezi: 7/24 canlı destek hattı</li><li>Ev Sensörleri: Yatak, hareket, kapı, gaz, kamera (tümleşik)</li><li>Akıllı Ev Kontrolü: Klima, TV, ısıtma; tam otomasyon</li><li>Robot Özelliği: Temi sınıfı tam özellikli robot asistan</li><li>AI Destekli Analiz: Haftalık sağlık ve yaşam analizi</li><li>Hedef Kitle: En üst düzey konfor ve bakım isteyenler</li></ul><div class="scenario">“Mutluluk Paketi ile en üst düzey konfor ve sürekli gözetim, aileniz için maksimum huzur.”</div>
+      </div></div></div></section>
+<footer class="site-footer"><div class="container"><p>© 2025 Carelio • Tüm Hakları Saklıdır.</p></div></footer><script src="assets/js/main-v3.js"></script></body></html>
